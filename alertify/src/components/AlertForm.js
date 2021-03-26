@@ -16,16 +16,16 @@ function AlertForm({allAlerts, setAllAlerts}) {
   function handleSubmit(e){
 
     e.preventDefault()
-    
+    console.log(alertForm)
     fetch(`http://localhost:3000/alerts`,{
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(alertForm),
+      body: JSON.stringify(alertForm)
     })
     .then(response  => response.json())
-      .then((newAlertData) => 
+      .then(newAlertData => 
       {
         const newAlerts = [...allAlerts, newAlertData]
         setAllAlerts(newAlerts) 

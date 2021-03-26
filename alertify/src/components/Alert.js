@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react"
 import AlertForm from './AlertForm'
+import AlertUpdateForm from './AlertUpdateForm'
 
 function Alert(){
 
-    const [allAlerts, setAllAlerts] = useState([])
-
+    const [allAlerts, setAllAlerts] = useState([]);
+    const [selectedAlert, setSelectedAlert] = useState(null);
     const API_AllAlerts = "http://localhost:3000/alerts"
 
     useEffect(()=>{
@@ -13,6 +14,20 @@ function Alert(){
         .then((data) => setAllAlerts(data))
     }, [])
 
+    function handleChangeForm(name, value) {
+        setSelectedAlert({
+          ...selectedAlert,
+          [name]: value,
+        });
+      }
+      
+    function handleEditAlert(updatedAlert) {
+        const updatedAlerts = allAlerts.map((alert) =>
+          alert.id === updatedAlert.id ? updatedAlert : alert
+        );
+        setSelectedAlert(updatedAlert);
+        setAllAlerts(updatedAlerts);
+    }
     
     function handleAlert() {
         
@@ -29,6 +44,10 @@ function Alert(){
         .catch(err => {
             console.error(err);
         });
+    }
+
+    function handleClick(currentAlert){
+        setSelectedAlert(currentAlert)
     }
 
 
@@ -52,17 +71,25 @@ function Alert(){
                 <button className="button1" onClick={handleAlert}>
         Alerts 
         </button>
+        <button type="button" className="btn btn-primary" onClick={() => handleClick(alert)}>
+          Edit Alert
+        </button>
         <button className="button-2" onClick={() =>handleDelete(alert)} >🗑</button>
             </p>
         </ol>
     ))
        
+    console.log(selectedAlert)
 
     return (
         <div>
        
          {alertArr}
-        
+         <AlertUpdateForm
+        alert={selectedAlert}
+        onChangeForm={handleChangeForm}
+        onEditAlert={handleEditAlert}
+      />
         <AlertForm allAlerts={allAlerts} setAllAlerts={setAllAlerts}/>
         </div>
     )
