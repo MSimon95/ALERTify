@@ -28,22 +28,26 @@ function Alert(){
         setSelectedAlert(updatedAlert);
         setAllAlerts(updatedAlerts);
     }
-    
-    function handleAlert() {
-        
-        fetch("https://twilio-sms.p.rapidapi.com/2010-04-01/Accounts/a/Messages.json?from=%2B19047482853&body=HI%20just%20Testing%20MyAPP&to=9174285006&statusCallback=11377", {
-            "method": "POST",
-            "headers": {
-                "x-rapidapi-key": "933e774a35msh8bc92379d6f01adp1f20d5jsnc1c191a09591",
-                "x-rapidapi-host": "twilio-sms.p.rapidapi.com"
-            }
-        })
-        .then(response => {
-            console.log(response);
-        })
-        .catch(err => {
-            console.error(err);
-        });
+
+    const phone = 9174285006
+    function handleAlert(alertClicked) {
+        console.log(alertClicked.info)
+        fetch(`https://twilio-sms.p.rapidapi.com/2010-04-01/Accounts/a/Messages.json?from=%2B1(904)748-2853&body=Event:${alertClicked.event}
+        Info:${alertClicked.info}
+        Time:${alertClicked.time}        
+        Place:${alertClicked.place}&to=${phone}&statusCallback=11377&mediaUrl=${alertClicked.image}`, {
+	"method": "POST",
+	"headers": {
+		"x-rapidapi-key": "933e774a35msh8bc92379d6f01adp1f20d5jsnc1c191a09591",
+		"x-rapidapi-host": "twilio-sms.p.rapidapi.com"
+	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.error(err);
+});
     }
 
     function handleClick(currentAlert){
@@ -68,7 +72,7 @@ function Alert(){
                 <li>{alert.info}</li>
                 <li>{alert.time}</li>
                 <li>{alert.place}</li>
-                <button className="button1" onClick={handleAlert}>
+                <button className="button1" onClick={() => handleAlert(alert)}>
         Alerts 
         </button>
         <button type="button" className="btn btn-primary" onClick={() => handleClick(alert)}>
