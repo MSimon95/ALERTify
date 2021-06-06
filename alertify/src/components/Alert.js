@@ -89,7 +89,6 @@ function Alert(){
 
     return (
         <div>
-       
          {alertArr}
          <AlertUpdateForm
         alert={selectedAlert}
