@@ -6,8 +6,9 @@ function Alert(){
 
     const [allAlerts, setAllAlerts] = useState([]);
     const [selectedAlert, setSelectedAlert] = useState(null);
+    const [allUsers, setAllUsers] = useState([]);
     const API_AllAlerts = "http://localhost:3000/alerts"
-
+  
     useEffect(()=>{
       fetch(API_AllAlerts)
         .then((res) => res.json())

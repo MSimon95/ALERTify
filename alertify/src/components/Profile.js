@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Profile({}) {
+function Profile({users, setUsers}) {
     const [profileForm, setProfileForm]= useState({username: "", password_digest: "", bio: "", image: ""})
  
     function updateProfileForm(event){
@@ -23,8 +23,8 @@ function Profile({}) {
     .then(response  => response.json())
       .then(newProfileData => 
       {
-        const newUsers = [...allUsers, newProfileData]
-        setAllAlerts(newUsers) 
+        const newUsers = [...users, newProfileData]
+        setUsers(newUsers) 
     })
     }
 
@@ -35,22 +35,18 @@ function Profile({}) {
             name="event" 
             value={profileForm.event}    
             onChange={updateProfileForm} />
+      <input className="input" placeholder="password" 
+            name= "password_digest" 
+            value={profileForm.password_digest} 
+            onChange={updateProfileForm} /> 
+      <input className="input" placeholder="bio" 
+            name= "bio" 
+            value={profileForm.bio} 
+            onChange={updateProfileForm} />         
       <input className="input" placeholder="image" 
             name= "image" 
             value={profileForm.image} 
             onChange={updateProfileForm} />
-      <input className="input" placeholder="info" 
-            name= "info" 
-            value={alertForm.info} 
-            onChange={updateAlertForm} /> 
-      <input className="input" placeholder="date" 
-            name= "date" 
-            value={alertForm.date} 
-            onChange={updateAlertForm} />
-      <input className="input" placeholder="time" 
-            name= "time" 
-            value={alertForm.time} 
-            onChange={updateAlertForm} />          
       <input className="profile-button" type="submit" 
             value="Make This profile" />
     </form>
