@@ -43,7 +43,7 @@ console.log(selectedUser)
     return (
         <div>
             {userArr}
-            <Profile selectedUser={selectedUser}/>
+            <Profile users={users} setUsers={setUsers} selectedUser={selectedUser}/>
         </div>
     );
 }
