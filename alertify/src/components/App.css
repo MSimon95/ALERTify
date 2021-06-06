@@ -1,6 +1,10 @@
 .App {
   text-align: center;
+  background-image: url(https://cdn.wallpapersafari.com/57/69/X0s3Dm.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 
 .App-logo {
   height: 40vmin;
@@ -31,12 +35,57 @@
 
 .nav span{
   height: 80%;
-  width: 800px;
+  width: 8vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgb(3, 8, 10);
+  border-radius: 2em;
 }
 
-/* position: "relative",
-  margin: "50px auto" */
+.header2 {
+  text-align: center;
+  background: url(alertify.png);
+  background-size: 25rem;
+  background-color:rgb(26,202,190);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 4vmin);
+
+}
+
+.header {
+  background-image: url(https://cdn.wallpapersafari.com/57/69/X0s3Dm.jpg);
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+
+.button1 {
+  font-size: 28px;
+  padding: 10px 24px;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(7, 175, 133, 0.904), 0 6px 20px 0 rgba(7, 175, 133, 0.904);
+}
+
+.button1:hover {
+  background-color: rgba(7, 175, 133, 0.904);
+  color: white;
+}
+
+.button2{
+  font-size: 8px;
+  padding: 10px 24px;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(7, 175, 133, 0.904), 0 6px 20px 0 rgba(7, 175, 133, 0.904);
+}
+
+.button2:hover {
+  background-color: rgba(7, 175, 133, 0.904);
+  color: white;
+}

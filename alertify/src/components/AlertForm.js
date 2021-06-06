@@ -3,7 +3,7 @@ import App from './App';
 import Alert from './Alert'
 
 function AlertForm({allAlerts, setAllAlerts}) {
-    const [alertForm, setAlertForm]= useState({event: "", image: "", info: "", time: "", place: ""})
+    const [alertForm, setAlertForm]= useState({event: "", image: "", info: "", date: "", time: "", place: ""})
  
     function updateAlertForm(event){
         const updatedFormState= {...alertForm}
@@ -47,6 +47,10 @@ function AlertForm({allAlerts, setAllAlerts}) {
             name= "info" 
             value={alertForm.info} 
             onChange={updateAlertForm} /> 
+      <input className="input" placeholder="date" 
+            name= "date" 
+            value={alertForm.date} 
+            onChange={updateAlertForm} />
       <input className="input" placeholder="time" 
             name= "time" 
             value={alertForm.time} 

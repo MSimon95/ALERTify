@@ -34,6 +34,7 @@ function Alert(){
         console.log(alertClicked.info)
         fetch(`https://twilio-sms.p.rapidapi.com/2010-04-01/Accounts/a/Messages.json?from=%2B1(904)748-2853&body=Event:${alertClicked.event}
         Info:${alertClicked.info}
+        Date:${alertClicked.date}
         Time:${alertClicked.time}        
         Place:${alertClicked.place}&to=${phone}&statusCallback=11377&mediaUrl=${alertClicked.image}`, {
 	"method": "POST",
@@ -70,15 +71,16 @@ function Alert(){
                 <img src={alert.image} alt={alert.event}></img>
                 {alert.event}
                 <li>{alert.info}</li>
+                <li>{alert.date}</li>
                 <li>{alert.time}</li>
                 <li>{alert.place}</li>
-                <button className="button1" onClick={() => handleAlert(alert)}>
+                <button className="button2" onClick={() => handleAlert(alert)}>
         Alerts 
         </button>
-        <button type="button" className="btn btn-primary" onClick={() => handleClick(alert)}>
+        <button type="button" className="button2" onClick={() => handleClick(alert)}>
           Edit Alert
         </button>
-        <button className="button-2" onClick={() =>handleDelete(alert)} >🗑</button>
+        <button className="button2" onClick={() =>handleDelete(alert)} >🗑</button>
             </p>
         </ol>
     ))

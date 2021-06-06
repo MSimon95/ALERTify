@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState }from 'react';
 import './App.css';
 import Alert from './Alert';
 import GroupAlert from './GroupAlert';
@@ -6,15 +6,26 @@ import AlertForm from './AlertForm';
 import { Switch, Route } from "react-router-dom";
 import NavBar from './NavBar'
 import User from './User'
+import Profile from './Profile'
 
 function App() {
+  const [allAlerts, setAllAlerts] = useState([]);
+const API_AllAlerts = "http://localhost:3000/alerts"
 
-
+    useEffect(()=>{
+      fetch(API_AllAlerts)
+        .then((res) => res.json())
+        .then((data) => setAllAlerts(data))
+    }, [])
 
 
     return (
       <div className="App">
-        <h1>Alertify</h1>
+        <div className= "header">
+             <div className="header2">
+               <h1></h1>
+             </div>
+          </div>
         <NavBar/>
           <Switch> 
 
@@ -23,13 +34,17 @@ function App() {
           </Route >
 
           <Route exact path="/group_alerts">
-            <GroupAlert/>
+            <GroupAlert allAlerts={allAlerts}/>
           </Route>
+
+          <Route exact path="/profile">
+            <Alert/> 
+          </Route >
 
           <Route exact path="/alerts">
             <Alert/> 
           </Route >
-          
+            <Profile/>
           </Switch>
        
         

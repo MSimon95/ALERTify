@@ -14,17 +14,17 @@ function Navbar() {
       <h1 className="navbar-logo"></h1>
       
       <ul className="nav-list">
-            <button>
+            <button className="button1">
               <Link onClick={handleClick} className="nav-links" to="/home">
                 <span>Home</span>
               </Link>
             </button>
-            <button>
+            <button className="button1">
               <Link onClick={handleClick} className="nav-links" to="/alerts">
                 <span>Alerts</span>
               </Link>
             </button>
-            <button>
+            <button className="button1">
               <Link onClick={handleClick} className="nav-links" to="/group_alerts">
                 <span>Calendar</span>
               </Link>
