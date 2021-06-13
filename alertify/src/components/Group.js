@@ -11,12 +11,13 @@ function Group(){
           .then((res) => res.json())
           .then((data) => setGroups(data))
       }, [])
+      
       const groupArr = groups.map((group)=> (
         <ol key={group.id}>
             <p className="group-container" id={group.id}>
-
                 <li>{group.description}</li>
-            
+                <li>{console.log(group)}</li>
+                <li>{group.user.username}</li>
                 </p>
         </ol>
       ))
