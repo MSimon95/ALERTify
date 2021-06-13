@@ -16,14 +16,13 @@ function User(){
         setSelectedUser(currentUser)
     }
 
-console.log(selectedUser)
-
       function handleDelete (userObj){
         fetch(`http://localhost:3000/users/${userObj.id}`, {
             method: 'DELETE'
               })
         const updatedUsers = users.filter((user) => user.id !== userObj.id);
         setUsers(updatedUsers);
+        console.log(userObj.id)
     }
 
       const userArr = users.map((user)=> ( 
