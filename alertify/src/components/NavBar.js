@@ -20,7 +20,7 @@ function Navbar() {
               </Link>
             </button>
             <button className="button1">
-              <Link onClick={handleClick} className="nav-links" to="/group">
+              <Link onClick={handleClick} className="nav-links" to="/groups">
                 <span>Group</span>
               </Link>
             </button>

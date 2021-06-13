@@ -7,6 +7,7 @@ import { Switch, Route } from "react-router-dom";
 import NavBar from './NavBar'
 import User from './User'
 import Profile from './Profile'
+import Group from './Group'
 
 function App() {
   const [allAlerts, setAllAlerts] = useState([]);
@@ -36,7 +37,9 @@ const API_AllAlerts = "http://localhost:3000/alerts"
           <Route exact path="/group_alerts">
             <GroupAlert allAlerts={allAlerts}/>
           </Route>
-
+          <Route exact path="/groups">
+            <Group/> 
+          </Route >
           <Route exact path="/profile">
             <Alert/> 
           </Route >
