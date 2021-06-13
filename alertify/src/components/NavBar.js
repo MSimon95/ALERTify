@@ -20,6 +20,11 @@ function Navbar() {
               </Link>
             </button>
             <button className="button1">
+              <Link onClick={handleClick} className="nav-links" to="/group">
+                <span>Group</span>
+              </Link>
+            </button>
+            <button className="button1">
               <Link onClick={handleClick} className="nav-links" to="/alerts">
                 <span>Alerts</span>
               </Link>
