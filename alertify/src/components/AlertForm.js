@@ -8,8 +8,7 @@ function AlertForm({allAlerts, setAllAlerts}) {
     function updateAlertForm(event){
         const updatedFormState= {...alertForm}
         updatedFormState[event.target.name]=event.target.value
-        console.log(alertForm)
-        console.log(event)
+
         setAlertForm(updatedFormState)
     }
 
