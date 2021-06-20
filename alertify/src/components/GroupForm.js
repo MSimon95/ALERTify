@@ -5,7 +5,7 @@ import Group from './Group'
 function GroupForm({groups, setGroups}) {
     const [groupForm, setGroupForm]= useState({description: "", user: ""})
  
-    function updateAlertForm(event){
+    function updateGroupForm(event){
         const updatedFormState= {...groupForm}
         updatedFormState[event.target.name]=event.target.value
         setGroupForm(updatedFormState)
@@ -31,7 +31,18 @@ function GroupForm({groups, setGroups}) {
 
 
   return (
-   
+    <form className="new-group-form" onSubmit={handleSubmit}>
+      <input className="input" placeholder="description" 
+            name="description" 
+            value={groupForm.description}    
+            onChange={updateGroupForm} />
+      <input className="input" placeholder="user" 
+            name= "user" 
+            value={groupForm.user} 
+            onChange={updateGroupForm} />
+     <input className="alert-button" type="submit" 
+            value="Make This Group" />
+    </form>
   );
 }
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-
+import GroupForm from './GroupForm'
 
 function Group(){
     const [groups, setGroups] = useState([]);
@@ -24,6 +24,8 @@ function Group(){
     return (
         <div>
         {groupArr}
+
+        <GroupForm groups={groups} setGroups={setGroups}/>
         </div>
     );
 }
