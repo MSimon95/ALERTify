@@ -15,9 +15,9 @@ function Group(){
       const groupArr = groups.map((group)=> (
         <ol key={group.id}>
             <p className="group-container" id={group.id}>
-                <li>{group.description}</li>
-                <li>{console.log(group)}</li>
-                <li>{group.user.username}</li>
+                <h2>{group.description}</h2>
+                <p>{group.user.username}</p>
+                <br></br>   
                 </p>
         </ol>
       ))
