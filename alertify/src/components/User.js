@@ -29,8 +29,8 @@ function User(){
         <ol key={user.id}>
             <p className="user-container" id={user.id}>
                 <img src={user.image} alt={user.username}></img>
-                <h2>{user.username}</h2>
-                <li>{user.bio}</li>                
+                <h1>{user.username}</h1>
+                <p>{user.bio}</p>                
         <button type="button" className="btn btn-primary" onClick={() => handleClick(user)}>
           click This
         </button>
