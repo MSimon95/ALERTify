@@ -68,13 +68,13 @@ function Alert(){
     
     const alertArr = allAlerts.map((alert)=> (
         <ol key={alert.id}>
-            <p className="alert-container" id={alert.id}>
+            <p className="alert-container" id={alert.id}> 
                 <img src={alert.image} alt={alert.event}></img>
                 {alert.event}
-                <li>{alert.info}</li>
-                <li>{alert.date}</li>
-                <li>{alert.time}</li>
-                <li>{alert.place}</li>
+                <p>{alert.info}</p>
+                <p>{alert.date}</p>
+                <p>{alert.time}</p>
+                <p>{alert.place}</p>
                 <button className="button2" onClick={() => handleAlert(alert)}>
         Alerts 
         </button>
