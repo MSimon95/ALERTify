@@ -31,11 +31,11 @@ const API_AllAlerts = "http://localhost:3000/alerts"
         <NavBar/>
           <Switch> 
 
-          <Route exact path="/user">
+          <Route exact path="/home">
             <About/>
           </Route >
 
-          <Route exact path="/home">
+          <Route exact path="/user">
             <User/> 
           </Route>
 

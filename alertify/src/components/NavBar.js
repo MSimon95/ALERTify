@@ -14,9 +14,14 @@ function Navbar() {
       <h1 className="navbar-logo"></h1>
       
       <ul className="nav-list">
-            <button className="button1">
+      <button className="button1">
               <Link onClick={handleClick} className="nav-links" to="/home">
                 <span>Home</span>
+              </Link>
+            </button>
+            <button className="button1">
+              <Link onClick={handleClick} className="nav-links" to="/user">
+                <span>User</span>
               </Link>
             </button>
             <button className="button1">
