@@ -8,6 +8,7 @@ import NavBar from './NavBar'
 import User from './User'
 import Profile from './Profile'
 import Group from './Group'
+import About from './About'
 
 function App() {
   const [allAlerts, setAllAlerts] = useState([]);
@@ -30,9 +31,13 @@ const API_AllAlerts = "http://localhost:3000/alerts"
         <NavBar/>
           <Switch> 
 
+          <Route exact path="/user">
+            <About/>
+          </Route >
+
           <Route exact path="/home">
             <User/> 
-          </Route >
+          </Route>
 
           <Route exact path="/group_alerts">
             <GroupAlert allAlerts={allAlerts}/>
