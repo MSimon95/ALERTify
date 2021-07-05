@@ -8,9 +8,9 @@ function Alert(){
     const [selectedAlert, setSelectedAlert] = useState(null);
     const [allUsers, setAllUsers] = useState([]);
     const API_AllAlerts = "http://localhost:3000/alerts"
-    const [currentPhone, setCurrentPhone] = useState(null)
-    const phone = 9174285006
-    setCurrentPhone(phone)
+    const [currentPhone, setCurrentPhone] = useState(9174285006);
+
+    console.log(currentPhone)
 
     useEffect(()=>{
       fetch(API_AllAlerts)
@@ -33,14 +33,14 @@ function Alert(){
         setAllAlerts(updatedAlerts);
     }
 
-    
+    const phone = 9174285006
     function handleAlert(alertClicked) {
-        console.log(currentPhone)
+
         fetch(`https://twilio-sms.p.rapidapi.com/2010-04-01/Accounts/a/Messages.json?from=%2B1(904)748-2853&body=Event:${alertClicked.event}
         Info:${alertClicked.info}
         Date:${alertClicked.date}
         Time:${alertClicked.time}        
-        Place:${alertClicked.place}&to=${currentPhone}&statusCallback=11377&mediaUrl=${alertClicked.image}`, {
+        Place:${alertClicked.place}&to=${phone}&statusCallback=11377&mediaUrl=${alertClicked.image}`, {
 	"method": "POST",
 	"headers": {
 		"x-rapidapi-key": "933e774a35msh8bc92379d6f01adp1f20d5jsnc1c191a09591",
@@ -89,6 +89,7 @@ function Alert(){
         </ol>
     ))
        
+
 
     return (
         <div>
