@@ -6,11 +6,9 @@ function Alert(){
 
     const [allAlerts, setAllAlerts] = useState([]);
     const [selectedAlert, setSelectedAlert] = useState(null);
-    const [allUsers, setAllUsers] = useState([]);
     const API_AllAlerts = "http://localhost:3000/alerts"
     const [currentPhone, setCurrentPhone] = useState(9174285006);
 
-    console.log(currentPhone)
 
     useEffect(()=>{
       fetch(API_AllAlerts)
@@ -24,6 +22,11 @@ function Alert(){
           [name]: value,
         });
       }
+
+    // function handleSubmit(e){
+    //   e.preventDefault()
+
+    // }  
       
     function handleEditAlert(updatedAlert) {
         const updatedAlerts = allAlerts.map((alert) =>
@@ -33,7 +36,6 @@ function Alert(){
         setAllAlerts(updatedAlerts);
     }
 
-    const phone = 9174285006
     function handleAlert(alertClicked) {
 
         fetch(`https://twilio-sms.p.rapidapi.com/2010-04-01/Accounts/a/Messages.json?from=%2B1(904)748-2853&body=Event:${alertClicked.event}
@@ -93,6 +95,14 @@ function Alert(){
 
     return (
         <div>
+              {/* <form className="new-alert-form" onSubmit={handleSubmit}>
+      <input className="input" placeholder="phone" 
+            name="phone" 
+            value={alertForm.event}    
+            onChange={updateAlertForm} />
+            <input className="alert-button" type="submit number"  
+            value="Make primary number" />
+    </form> */}
          {alertArr}
          <AlertUpdateForm
         alert={selectedAlert}
