@@ -8,7 +8,9 @@ function Alert(){
     const [selectedAlert, setSelectedAlert] = useState(null);
     const [allUsers, setAllUsers] = useState([]);
     const API_AllAlerts = "http://localhost:3000/alerts"
-  
+    let [currentPhone, setCurrentPhone] = useState(null)
+
+
     useEffect(()=>{
       fetch(API_AllAlerts)
         .then((res) => res.json())
@@ -32,7 +34,7 @@ function Alert(){
 
     const phone = 9174285006
     function handleAlert(alertClicked) {
-        console.log(alertClicked.info)
+
         fetch(`https://twilio-sms.p.rapidapi.com/2010-04-01/Accounts/a/Messages.json?from=%2B1(904)748-2853&body=Event:${alertClicked.event}
         Info:${alertClicked.info}
         Date:${alertClicked.date}
