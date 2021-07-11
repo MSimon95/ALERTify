@@ -2,7 +2,6 @@ import React, { useEffect, useState }from 'react';
 import './App.css';
 import Alert from './Alert';
 import GroupAlert from './GroupAlert';
-import AlertForm from './AlertForm';
 import { Switch, Route } from "react-router-dom";
 import NavBar from './NavBar'
 import User from './User'
@@ -54,10 +53,6 @@ const API_AllAlerts = "http://localhost:3000/alerts"
           </Route >
             <Profile/>
           </Switch>
-       
-        
-   
-         
       </div>
     );
 }

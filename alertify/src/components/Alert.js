@@ -90,14 +90,6 @@ function Alert(){
 
     return (
         <div>
-              {/* <form className="new-alert-form" onSubmit={handleSubmit}>
-      <input className="input" placeholder="phone" 
-            name="phone" 
-            value={alertForm.event}    
-            onChange={updateAlertForm} />
-            <input className="alert-button" type="submit number"  
-            value="Make primary number" />
-    </form> */}
          {alertArr}
          <AlertUpdateForm
         alert={selectedAlert}
