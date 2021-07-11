@@ -22,7 +22,6 @@ function User(){
               })
         const updatedUsers = users.filter((user) => user.id !== userObj.id);
         setUsers(updatedUsers);
-        console.log(userObj.id)
     }
 
       const userArr = users.map((user)=> ( 

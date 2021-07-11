@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import App from './App';
-import Group from './Group'
 
 function GroupForm({groups, setGroups}) {
     const [groupForm, setGroupForm]= useState({description: "", user: ""})
