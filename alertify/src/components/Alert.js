@@ -23,11 +23,6 @@ function Alert(){
         });
       }
 
-    // function handleSubmit(e){
-    //   e.preventDefault()
-
-    // }  
-      
     function handleEditAlert(updatedAlert) {
         const updatedAlerts = allAlerts.map((alert) =>
           alert.id === updatedAlert.id ? updatedAlert : alert

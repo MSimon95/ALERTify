@@ -24,9 +24,7 @@ function GroupAlert({allAlerts}) {
         }
     
     const handleEventClick = (eventClickInfo) => {
-        // return {
-
-        // }
+  
         console.log(eventClickInfo.event)
     }
 
