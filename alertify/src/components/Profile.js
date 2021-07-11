@@ -32,8 +32,8 @@ function Profile({users, setUsers}) {
   return (
     <form className="new-profile-form" onSubmit={handleSubmit}>
       <input className="input" placeholder="event" 
-            name="event" 
-            value={profileForm.event}    
+            name="Username" 
+            value={profileForm.username}    
             onChange={updateProfileForm} />
       <input className="input" placeholder="password" 
             name= "password_digest" 
