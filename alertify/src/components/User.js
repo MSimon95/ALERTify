@@ -29,7 +29,8 @@ function User(){
             <p className="user-container" id={user.id}>
                 <img src={user.image} alt={user.username}></img>
                 <h1>{user.username}</h1>
-                <p>{user.bio}</p>                
+                <p>{user.bio}</p>  
+                <p>{user.phone}</p>              
         <button type="button" className="btn btn-primary" onClick={() => handleClick(user)}>
           click This
         </button>
