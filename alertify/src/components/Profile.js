@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Profile({users, setUsers}) {
-    const [profileForm, setProfileForm]= useState({username: "", password_digest: "", bio: "", image: ""})
+    const [profileForm, setProfileForm]= useState({username: "", password_digest: "", phone: "", bio: "", image: ""})
  
     function updateProfileForm(event){
         const updatedProfileFormState= {...profileForm}
