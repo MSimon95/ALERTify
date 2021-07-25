@@ -39,6 +39,10 @@ function Profile({users, setUsers}) {
             name= "password_digest" 
             value={profileForm.password_digest} 
             onChange={updateProfileForm} /> 
+      <input className="input" placeholder="phone" 
+            name= "phone" 
+            value={profileForm.phone} 
+            onChange={updateProfileForm} />       
       <input className="input" placeholder="bio" 
             name= "bio" 
             value={profileForm.bio} 
