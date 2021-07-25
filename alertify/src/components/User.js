@@ -30,7 +30,8 @@ function User(){
                 <img src={user.image} alt={user.username}></img>
                 <h1>{user.username}</h1>
                 <p>{user.bio}</p>  
-                <p>{user.phone}</p>              
+                <em>{user.phone}</em>      
+                <br></br>        
         <button type="button" className="btn btn-primary" onClick={() => handleClick(user)}>
           click This
         </button>

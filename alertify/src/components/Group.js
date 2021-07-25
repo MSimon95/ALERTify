@@ -16,7 +16,7 @@ function Group(){
         <ol key={group.id}>
             <p className="group-container" id={group.id}>
                 <h2>{group.description}</h2>
-                <p>{group.user.username}</p>
+                <h3>{group.user.username}</h3>
                 <br></br>   
                 </p>
         </ol>
