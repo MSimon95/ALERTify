@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import App from './App';
-import Alert from './Alert'
+
 
 function AlertForm({allAlerts, setAllAlerts}) {
     const [alertForm, setAlertForm]= useState({event: "", image: "", info: "", date: "", time: "", place: ""})

@@ -16,7 +16,7 @@ function GroupAlert({allAlerts}) {
           .then((data) => setGroupEvents(data))
       }, [])
 
-    console.log(groupEvents)
+
 
     const handleDateClick = (dateClickInfo) => {
 
