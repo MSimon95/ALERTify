@@ -20,12 +20,12 @@ function GroupAlert({allAlerts}) {
 
     const handleDateClick = (dateClickInfo) => {
 
-            console.log(dateClickInfo.dateStr);
+            console.log(dateClickInfo);
         }
     
     const handleEventClick = (eventClickInfo) => {
   
-        console.log(eventClickInfo.event)
+        console.log(eventClickInfo)
     }
 
     
