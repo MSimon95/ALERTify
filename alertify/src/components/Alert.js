@@ -2,14 +2,15 @@ import React, { useState, useEffect } from "react"
 import AlertForm from './AlertForm'
 import AlertUpdateForm from './AlertUpdateForm'
 
-function Alert(){
+function Alert({selectedUser, setSelectedUser}){
 
     const [allAlerts, setAllAlerts] = useState([]);
     const [selectedAlert, setSelectedAlert] = useState(null);
     const API_AllAlerts = "http://localhost:3000/alerts"
     const [currentPhone, setCurrentPhone] = useState(9174285006);
 
-
+    setCurrentPhone(selectedUser.phone)
+    console.log(currentPhone)
     useEffect(()=>{
       fetch(API_AllAlerts)
         .then((res) => res.json())
