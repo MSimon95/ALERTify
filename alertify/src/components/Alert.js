@@ -85,7 +85,7 @@ function Alert({selectedUser, setSelectedUser}){
         <button type="button" className="button2" onClick={() => handleClick(alert)}>
           Edit Alert
         </button>
-        <button className="button2" onClick={() =>handleDelete(alert)} >🗑</button>
+        <button className="button2" onClick={() =>handleDelete(alert)} >Delete🗑</button>
             </p>
         </ol>
     ))
