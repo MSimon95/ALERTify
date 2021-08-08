@@ -74,9 +74,9 @@ function Alert({selectedUser, setSelectedUser}){
         <ol key={alert.id}>
             <p className="alert-container" id={alert.id}> 
                 <img src={alert.image} alt={alert.event}></img>
-               <em></em> <h2>{alert.event}</h2>
-                <p>{alert.info}</p>
-                <p>{alert.date}</p>
+               <em><h2>{alert.event}</h2></em> 
+                <p>Info:  {alert.info}</p>
+                <p>Date: {alert.date}</p>
                 <p>{alert.time}</p>
                 <p>{alert.place}</p>
                 <button className="button2" onClick={() => handleAlert(alert)}>
