@@ -80,7 +80,7 @@ function Alert({selectedUser, setSelectedUser}){
                 <p>{alert.time}</p>
                 <p>{alert.place}</p>
                 <button className="button2" onClick={() => handleAlert(alert)}>
-        Alerts 
+        Send Alerts 
         </button>
         <button type="button" className="button2" onClick={() => handleClick(alert)}>
           Edit Alert
