@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import AlertForm from './AlertForm'
 import AlertUpdateForm from './AlertUpdateForm'
-import User from './User'
 
 function Alert({selectedUser, setSelectedUser}){
 
