@@ -108,14 +108,14 @@
 }
 
 .profile-button {
-  font-size: 28px;
+  font-size: 12px;
   padding: 10px 24px;
-  border-radius: 12px;
+  border-radius: 6px;
   transition-duration: 0.4s;
   box-shadow: 0 8px 16px 0 rgba(7, 175, 133, 0.904), 0 6px 20px 0 rgba(7, 175, 133, 0.904);
 }
 
-.button1:hover {
+.profile-button:hover {
   background-color: rgba(7, 175, 133, 0.904);
   color: white;
 }
