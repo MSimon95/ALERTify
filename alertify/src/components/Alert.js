@@ -55,8 +55,6 @@ function Alert({selectedUser, setSelectedUser}){
 
     function handleClick(currentAlert){
         setSelectedAlert(currentAlert)
-        setCurrentPhone(selectedUser.phone)
-        console.log(currentPhone)
     }
 
 
