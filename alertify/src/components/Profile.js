@@ -31,26 +31,36 @@ function Profile({users, setUsers}) {
 
   return (
     <form className="new-profile-form" onSubmit={handleSubmit}>
+      <p>
       <input className="input" placeholder="Username" 
             name="username" 
             value={profileForm.username}    
             onChange={updateProfileForm} />
+      </p>
+      <p>
       <input className="input" placeholder="password" 
             name= "password_digest" 
             value={profileForm.password_digest} 
             onChange={updateProfileForm} /> 
+      </p>
+      <p>
       <input className="input" placeholder="phone" 
             name= "phone" 
             value={profileForm.phone} 
-            onChange={updateProfileForm} />       
+            onChange={updateProfileForm} /> 
+      </p>      
+      <p>
       <input className="input" placeholder="bio" 
             name= "bio" 
             value={profileForm.bio} 
-            onChange={updateProfileForm} />         
+            onChange={updateProfileForm} />       
+      </p>  
+      <p>
       <input className="input" placeholder="image" 
             name= "image" 
             value={profileForm.image} 
             onChange={updateProfileForm} />
+      </p>
       <input className="profile-button" type="submit" 
             value="Make This profile" />
     </form>
