@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import AlertForm from './AlertForm'
 import AlertUpdateForm from './AlertUpdateForm'
 
-function Alert({selectedUser, setSelectedUser}){
+function Alert(){
 
     const [allAlerts, setAllAlerts] = useState([]);
     const [selectedAlert, setSelectedAlert] = useState(null);

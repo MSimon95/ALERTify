@@ -45,7 +45,7 @@ function User(){
         <div>
             {userArr}
             <Profile users={users} setUsers={setUsers} selectedUser={selectedUser}/>
-            <Alert selectedUser={selectedUser} setSelectedUser={setSelectedUser} />
+            {/* <Alert selectedUser={selectedUser} setSelectedUser={setSelectedUser} /> */}
         </div>
     );
 }
