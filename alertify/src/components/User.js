@@ -31,9 +31,9 @@ function User(){
                 <img src={user.image} alt={user.username}></img>
                 <h1>{user.username}</h1>
                 <p>{user.bio}</p>  
-                <em>{user.phone}</em>          
+                <em>{user.phone}</em>        
         <button type="button" className="btn btn-primary" onClick={() => handleClick(user)}>
-          click This
+          Choose Recepient
         </button>
         <button className="button-2" onClick={() =>handleDelete(user)} >🗑</button>
             </p>
