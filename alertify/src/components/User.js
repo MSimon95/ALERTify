@@ -5,7 +5,7 @@ import Alert from './Alert'
 function User(){
     const [users, setUsers] = useState([]);
     const API_Users = "http://localhost:3000/users"
-    const [selectedUser, setSelectedUser] = useState(null);
+    const [selectedUser, setSelectedUser] = useState("");
 
     useEffect(()=>{
         fetch(API_Users)
@@ -31,8 +31,7 @@ function User(){
                 <img src={user.image} alt={user.username}></img>
                 <h1>{user.username}</h1>
                 <p>{user.bio}</p>  
-                <em>{user.phone}</em>      
-                <br></br>        
+                <em>{user.phone}</em>          
         <button type="button" className="btn btn-primary" onClick={() => handleClick(user)}>
           click This
         </button>
