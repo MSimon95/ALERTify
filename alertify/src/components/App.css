@@ -126,23 +126,23 @@
   padding: 6px 18px;
   border-radius: 3px;
   transition-duration: 0.4s;
-  box-shadow: 0 8px 16px 0 rgba(7, 175, 133, 0.904), 0 6px 20px 0 rgba(7, 175, 133, 0.904);
+  box-shadow: 0 8px 16px 0  rgba(7, 32, 175, 0.904), 0 6px 20px 0 rgba(7, 175, 133, 0.904);
 }
 
 .btn-primary:hover {
-  background-color: rgba(7, 175, 133, 0.904);
+  background-color: rgba(57, 32, 199, 0.904);
   color: white;
 }
 
 .button-2 {
-  font-size: 12px;
+  font-size: 12px;  
   padding: 6px 18px;
   border-radius: 3px;
   transition-duration: 0.4s;
-  box-shadow: 0 8px 16px 0 rgba(7, 175, 133, 0.904), 0 6px 20px 0 rgba(7, 175, 133, 0.904);
+  box-shadow: 0 8px 16px 0 rgba(7, 32, 175, 0.904), 0 6px 20px 0 rgba(7, 175, 133, 0.904);
 }
 
 .button-2:hover {
-  background-color: rgba(7, 175, 133, 0.904);
+  background-color: rgba(57, 32, 199, 0.904);
   color: white;
 }
