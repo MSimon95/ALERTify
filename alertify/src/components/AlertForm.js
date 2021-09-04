@@ -33,14 +33,18 @@ function AlertForm({allAlerts, setAllAlerts}) {
 
   return (
     <form className="new-alert-form" onSubmit={handleSubmit}>
+      <p>
       <input className="input" placeholder="event" 
             name="event" 
             value={alertForm.event}    
             onChange={updateAlertForm} />
+      </p>
+      <p>
       <input className="input" placeholder="image" 
             name= "image" 
             value={alertForm.image} 
             onChange={updateAlertForm} />
+      </p>
       <input className="input" placeholder="info" 
             name= "info" 
             value={alertForm.info} 
