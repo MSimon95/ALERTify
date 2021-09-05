@@ -45,14 +45,18 @@ function AlertForm({allAlerts, setAllAlerts}) {
             value={alertForm.image} 
             onChange={updateAlertForm} />
       </p>
+      <p>
       <input className="input" placeholder="info" 
             name= "info" 
             value={alertForm.info} 
             onChange={updateAlertForm} /> 
+      </p>
+      <p>
       <input className="input" placeholder="date" 
             name= "date" 
             value={alertForm.date} 
             onChange={updateAlertForm} />
+      </p>
       <input className="input" placeholder="time" 
             name= "time" 
             value={alertForm.time} 
