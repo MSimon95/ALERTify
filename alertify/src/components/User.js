@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import Profile from './Profile'
-import Alert from './Alert'
 
 function User(){
     const [users, setUsers] = useState([]);

@@ -82,7 +82,7 @@ function Alert(){
         <button type="button" className="button2" onClick={() => handleClick(alert)}>
           Edit Alert
         </button>
-        <button className="button2" onClick={() =>handleDelete(alert)} >Delete🗑</button>
+        <button className="button2" onClick={() =>handleDelete(alert)} >🗑</button>
             </p>
         </ol>
     ))

@@ -61,8 +61,11 @@ function Profile({users, setUsers}) {
             value={profileForm.image} 
             onChange={updateProfileForm} />
       </p>
+      <p>
+
       <input className="profile-button" type="submit" 
             value="Make This profile" />
+      </p>
     </form>
   );
 }
