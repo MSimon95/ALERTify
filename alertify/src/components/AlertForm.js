@@ -57,16 +57,22 @@ function AlertForm({allAlerts, setAllAlerts}) {
             value={alertForm.date} 
             onChange={updateAlertForm} />
       </p>
+      <p>
       <input className="input" placeholder="time" 
             name= "time" 
             value={alertForm.time} 
             onChange={updateAlertForm} />  
+      </p>
+      <p>
       <input className="input" placeholder="place" 
             name= "place" 
             value={alertForm.place} 
-            onChange={updateAlertForm} />         
+            onChange={updateAlertForm} />
+      </p>
+      <p>      
       <input className="alert-button" type="submit" 
             value="Make This alert" />
+      </p>
     </form>
   );
 }
