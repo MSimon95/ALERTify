@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import Profile from './Profile'
-import Alert from './Alert'
 
 function User(){
     const [users, setUsers] = useState([]);
@@ -13,6 +12,10 @@ function User(){
           .then((data) => setUsers(data))
       }, [])
 
+      function handleClick(currentUser){
+        setSelectedUser(currentUser)
+    }
+
       function handleDelete (userObj){
         fetch(`http://localhost:3000/users/${userObj.id}`, {
             method: 'DELETE'
@@ -20,7 +23,7 @@ function User(){
         const updatedUsers = users.filter((user) => user.id !== userObj.id);
         setUsers(updatedUsers);
     }
-
+    
       const userArr = users.map((user)=> ( 
         <ol key={user.id}>
             <p className="user-container" id={user.id}>
