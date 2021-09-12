@@ -13,10 +13,6 @@ function User(){
           .then((data) => setUsers(data))
       }, [])
 
-      function handleClick(currentUser){
-        setSelectedUser(currentUser)
-    }
-
       function handleDelete (userObj){
         fetch(`http://localhost:3000/users/${userObj.id}`, {
             method: 'DELETE'
