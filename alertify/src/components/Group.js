@@ -12,13 +12,13 @@ function Group(){
           .then((data) => setGroups(data))
       }, [])
       function handleDelete (groupObj){
-        fetch(`http://localhost:3000/users/${groupObj.id}`, {
+        fetch(`http://localhost:3000/groups/${groupObj.id}`, {
             method: 'DELETE'
               })
               .then(res => res.text())
               .then(res => console.log(res))
-        const updatedUsers = users.filter((user) => user.id !== userObj.id);
-        setUsers(updatedUsers);
+        const updatedGroups = groups.filter((group) => group.id !== groupObj.id);
+        setGroups(updatedGroups);
     }
       
       const groupArr = groups.map((group)=> (
