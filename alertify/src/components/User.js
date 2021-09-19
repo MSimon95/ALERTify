@@ -20,6 +20,8 @@ function User(){
         fetch(`http://localhost:3000/users/${userObj.id}`, {
             method: 'DELETE'
               })
+              .then(res => res.text())
+              .then(res => console.log(res))
         const updatedUsers = users.filter((user) => user.id !== userObj.id);
         setUsers(updatedUsers);
     }
