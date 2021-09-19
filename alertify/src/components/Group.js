@@ -20,13 +20,13 @@ function Group(){
         const updatedGroups = groups.filter((group) => group.id !== groupObj.id);
         setGroups(updatedGroups);
     }
-      
+    
       const groupArr = groups.map((group)=> (
         <ol key={group.id}>
             <p className="group-container" id={group.id}>
                 <h2>{group.description}</h2>
                 <h3>{group.user.username}</h3>
-                <button className="button-2" onClick={() =>handleDelete()} >🗑</button>
+                <button className="button-2" onClick={() =>handleDelete(group)} >🗑</button>
                 <br></br>   
                 </p>
         </ol>
