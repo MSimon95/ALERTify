@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react"
 import AlertForm from './AlertForm'
 import AlertUpdateForm from './AlertUpdateForm'
+import User from './User'
 
-function Alert(){
+function Alert({selectedUser, setSelectedUser}){
 
     const [allAlerts, setAllAlerts] = useState([]);
     const [selectedAlert, setSelectedAlert] = useState(null);
@@ -56,8 +57,9 @@ function Alert(){
     function handleClick(currentAlert){
         setSelectedAlert(currentAlert)
     }
-    function handlePhone(changePhone){
-      setCurrentPhone(changePhone)
+    function handlePhone(selectedUser){
+      setCurrentPhone(selectedUser.phone)
+      console.log(selectedUser)
     }
 
     function handleDelete (alertObj){
