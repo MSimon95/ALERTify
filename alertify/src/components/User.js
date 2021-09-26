@@ -29,7 +29,7 @@ function User(){
     
       const userArr = users.map((user)=> ( 
         <ol key={user.id}>
-            <p className="user-container" id={user.id}>
+            <ul className="user-container" id={user.id}>
                 <img src={user.image} alt={user.username}></img>
                 <h1>{user.username}</h1>
                 <p>{user.bio}</p>  
@@ -38,7 +38,7 @@ function User(){
           Choose Recepient
         </button>
         <button className="button-2" onClick={() =>handleDelete(user)} >🗑</button>
-            </p>
+            </ul>
         </ol>
       ))  
 
