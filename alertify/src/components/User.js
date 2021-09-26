@@ -14,6 +14,7 @@ function User(){
 
       function handleClick(currentUser){
         setSelectedUser(currentUser)
+        console.log(currentUser.phone)
     }
 
       function handleDelete (userObj){
