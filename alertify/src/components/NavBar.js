@@ -21,7 +21,7 @@ function Navbar() {
             </button>
             <button className="button1">
               <Link onClick={handleClick} className="nav-links" to="/user">
-                <span>User</span>
+                <span>Profile</span>
               </Link>
             </button>
             <button className="button1">
