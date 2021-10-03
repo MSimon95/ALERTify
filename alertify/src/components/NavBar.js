@@ -16,7 +16,7 @@ function Navbar() {
       <ul className="nav-list">
       <button className="button1">
               <Link onClick={handleClick} className="nav-links" to="/home">
-                <span>Home</span>
+                <span>About</span>
               </Link>
             </button>
             <button className="button1">
