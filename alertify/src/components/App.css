@@ -97,6 +97,14 @@
   transition-duration: 0.4s;
   box-shadow: 0 8px 16px 0 rgba(7, 175, 133, 0.904), 0 6px 20px 0 rgba(7, 175, 133, 0.904);
 }
+.alert-container {
+  background-color: rgba(43, 7, 175, 0.904);
+  color: rgb(8, 6, 6);
+  font-size: 16px;
+  font-style: italic;
+  padding: 5px 12px;
+  border-radius: 2px;
+}
 
 .alert-button {
   background-color: rgba(7, 175, 133, 0.904);

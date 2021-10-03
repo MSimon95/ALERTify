@@ -73,7 +73,7 @@ function Alert({selectedUser, setSelectedUser}){
     
     const alertArr = allAlerts.map((alert)=> (
         <ol key={alert.id}>
-            <p className="alert-container" id={alert.id}> 
+            <div className="alert-container" id={alert.id}> 
                 <img src={alert.image} alt={alert.event}></img>
                <em><h2>{alert.event}</h2></em> 
                 <p>Info:  {alert.info}</p>
@@ -87,7 +87,7 @@ function Alert({selectedUser, setSelectedUser}){
           Edit Alert
         </button>
         <button className="button2" onClick={() =>handleDelete(alert)} >🗑</button>
-            </p>
+            </div>
         </ol>
     ))
        
