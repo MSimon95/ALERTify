@@ -105,8 +105,9 @@
   color: rgb(8, 6, 6);
   font-size: 16px;
   font-style: sans-serif;
-  padding: 10px 24px;
-  border-radius: 12px;
+  padding: 5px 6px;
+  border-radius: 120px;
+  float: left;
 }
 
 .alert-button {
