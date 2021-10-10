@@ -99,7 +99,8 @@
 }
 .alert-container {
   height: 60%;
-  width: 40vw;
+  width: auto;
+
   background-color: rgba(0, 148, 246, 0.904);
   background-image: cross-fade();
   color: rgb(8, 6, 6);
