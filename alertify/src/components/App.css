@@ -104,9 +104,9 @@
   background-image: cross-fade();
   color: rgb(8, 6, 6);
   font-size: 16px;
-  font-style: italic;
-  padding: 5px 12px;
-  border-radius: 2px;
+  font-style: sans-serif;
+  padding: 10px 24px;
+  border-radius: 12px;
 }
 
 .alert-button {
