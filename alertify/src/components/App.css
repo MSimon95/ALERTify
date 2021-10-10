@@ -2,20 +2,9 @@
   text-align: center;
   background-image: url(https://cdn.wallpapersafari.com/57/69/X0s3Dm.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto auto;
 }
 
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -98,15 +87,13 @@
   box-shadow: 0 8px 16px 0 rgba(7, 175, 133, 0.904), 0 6px 20px 0 rgba(7, 175, 133, 0.904);
 }
 .alert-container {
-  height: 60%;
+  height: auto;
   width: auto;
-
   background-color: rgba(0, 148, 246, 0.904);
-  background-image: cross-fade();
   color: rgb(8, 6, 6);
   font-size: 16px;
   font-style: sans-serif;
-  padding: 5px 6px;
+  padding: 20px 24px;
   border-radius: 120px;
   float: left;
 }
