@@ -14,7 +14,6 @@ function User(){
 
       function handleClick(currentUser){
         setSelectedUser(currentUser)
-        console.log(currentUser.phone)
     }
 
       function handleDelete (userObj){
@@ -33,13 +32,12 @@ function User(){
                 <img src={user.image} alt={user.username}></img>
                 <h1>{user.username}</h1>
                 <p>{user.bio}</p>  
-                <em>{user.phone}</em>        
         <button type="button" className="btn-primary" onClick={() => handleClick(user)}>
           Choose Recepient
         </button>
         <button className="button-2" onClick={() =>handleDelete(user)} >🗑</button>
             </ul>
-        </ol>
+        </ol> 
       ))  
 
     return (

@@ -165,6 +165,9 @@
   height: auto;
   width: auto;
   background-color: rgba(0, 148, 246, 0.904);
-  color: rgb(8, 6, 6);
+  color: rgb(0, 0, 0);
   font-size: 16px;
+  font-style: sans-serif;
+  padding: 20px 24px;
+  border-radius: 120px;
 }
