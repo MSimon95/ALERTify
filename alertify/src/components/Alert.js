@@ -74,8 +74,8 @@ function Alert({selectedUser, setSelectedUser}){
     const alertArr = allAlerts.map((alert)=> (
         <ol key={alert.id}>
             <div className="alert-container" id={alert.id}> 
-                <img src={alert.image} alt={alert.event}></img>
                <em><h2>{alert.event}</h2></em> 
+                <img src={alert.image} alt={alert.event}></img>
                 <p>Info:  {alert.info}</p>
                 <p>Date: {alert.date}</p>
                 <p>Time:{alert.time}</p>
