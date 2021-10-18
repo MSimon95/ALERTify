@@ -22,14 +22,14 @@ function Group(){
     }
     
       const groupArr = groups.map((group)=> (
-        <ol key={group.id}>
+        <li key={group.id}>
             <ul className="group-container" id={group.id}>
                 <h2>{group.description}</h2>
                 <h3>{group.user.username}</h3>
                 <button className="button-2" onClick={() =>handleDelete(group)} >🗑</button>
                 <br></br>   
                 </ul>
-        </ol>
+        </li>
       ))
     return (
         <div>
