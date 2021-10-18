@@ -51,7 +51,10 @@
   top: 0;
   left: 0;
 }
-
+.about {
+  font-size: 16px;
+  font-style: italic;
+}
 
 .button1 {
   font-size: 28px;

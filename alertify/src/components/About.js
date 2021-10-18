@@ -3,7 +3,7 @@ import React from "react"
 function About(){
 
     return (
-        <div>
+        <div className="about">
             <img src='https://media0.giphy.com/media/6IPNUgkpCsDRK/200.gif' alt="About"></img>
             <h1>Do you always forget events that you don't usually keep track?</h1>
             <h2>The Alertify is for people to remember and store everything that they need to be reminded of</h2>
