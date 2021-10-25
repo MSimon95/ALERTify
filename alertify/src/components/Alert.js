@@ -66,12 +66,10 @@ function Alert({selectedUser, setSelectedUser}){
         fetch(`http://localhost:3000/alerts/${alertObj.id}`, {
           method: 'DELETE',
         })
-        .then(res => res.text()) // or res.json()
-        .then(res => console.log(res))
+        console.log(alertObj.id)
         const updatedAlerts = allAlerts.filter((alert) => alert.id !== alertObj.id);
         setAllAlerts(updatedAlerts);
     }
-
     
     const alertArr = allAlerts.map((alert)=> (
         <ol key={alert.id}>
