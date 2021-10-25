@@ -63,7 +63,7 @@ function Alert({selectedUser, setSelectedUser}){
     }
 
     function handleDelete (alertObj){
-        fetch(`http://localhost:3000/alerts/`+ alertObj.id, {
+        fetch(`http://localhost:3000/alerts/${alertObj.id}`, {
           method: 'DELETE',
         })
         .then(res => res.text()) // or res.json()
