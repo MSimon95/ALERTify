@@ -63,9 +63,11 @@ function Alert({selectedUser, setSelectedUser}){
     }
 
     function handleDelete (alertObj){
-        fetch(`http://localhost:3000/alerts/${alertObj.id}`, {
-            method: 'DELETE'
-              })
+        fetch(`http://localhost:3000/alerts/`+ alertObj.id, {
+          method: 'DELETE',
+        })
+        .then(res => res.text()) // or res.json()
+        .then(res => console.log(res))
         const updatedAlerts = allAlerts.filter((alert) => alert.id !== alertObj.id);
         setAllAlerts(updatedAlerts);
     }
