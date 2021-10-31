@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react"
 import AlertForm from './AlertForm'
 import AlertUpdateForm from './AlertUpdateForm'
-import User from './User'
 
-function Alert({selectedUser, setSelectedUser}){
+function Alert({}){
 
     const [allAlerts, setAllAlerts] = useState([]);
     const [selectedAlert, setSelectedAlert] = useState(null);
@@ -66,7 +65,6 @@ function Alert({selectedUser, setSelectedUser}){
         fetch(`http://localhost:3000/alerts/${alertObj.id}`, {
           method: 'DELETE',
         })
-        console.log(alertObj.id)
         const updatedAlerts = allAlerts.filter((alert) => alert.id !== alertObj.id);
         setAllAlerts(updatedAlerts);
     }
