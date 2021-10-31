@@ -10,6 +10,7 @@ function About(){
             <h2>You will get a text of every detail that is important for you to remember like photo or gif, date, place, time, and ofcourse the name of the event you need to remember. </h2>
             <br></br>
             <br></br>
+            <br></br>
             <p>I am currently working on having more options to notify the user and how to access more information via social media</p>
         </div>
     )

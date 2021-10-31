@@ -59,7 +59,7 @@ tr {
     color: white;
 }
 .selected-day {
-    background-color:yellow;
+    background-color: #1606f7b4;    
     width: 28px;
     height: 28px;
     line-height: 28px;
