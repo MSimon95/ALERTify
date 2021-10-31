@@ -7,7 +7,7 @@ function Alert(){
     const [allAlerts, setAllAlerts] = useState([]);
     const [selectedAlert, setSelectedAlert] = useState(null);
     const API_AllAlerts = "http://localhost:3000/alerts"
-    const [currentPhone, setCurrentPhone] = useState(9174285006);
+        const [currentPhone, setCurrentPhone] = useState(9174285006);
 
   
    
@@ -56,10 +56,10 @@ function Alert(){
     function handleClick(currentAlert){
         setSelectedAlert(currentAlert)
     }
-    function handlePhone(selectedUser){
-      setCurrentPhone(selectedUser.phone)
-      console.log(selectedUser)
-    }
+    // function handlePhone(selectedUser){
+    //   setCurrentPhone(selectedUser.phone)
+    //   console.log(selectedUser)
+    // }
 
     function handleDelete (alertObj){
         fetch(`http://localhost:3000/alerts/${alertObj.id}`, {
