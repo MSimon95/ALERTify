@@ -11,7 +11,7 @@ function Navbar() {
   
   return (
     <nav className="nav">
-      <h1 className="navbar-logo"></h1>
+      {/* <h1 className="navbar-logo"> </h1> */}
       
       <ul className="nav-list">
       <button className="button1">

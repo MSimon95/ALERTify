@@ -24,7 +24,6 @@ const API_AllAlerts = "http://localhost:3000/alerts"
       <div className="App">
         <div className= "header">
              <div className="header2">
-               <h1></h1>
              </div>
           </div>
         <NavBar/>
