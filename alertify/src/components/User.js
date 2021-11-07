@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Profile from './Profile'
+import Alert from './Alert'
 
 function User(){
     const [users, setUsers] = useState([]);
@@ -15,8 +16,12 @@ function User(){
       function handleClick(currentUser){
         setSelectedUser(currentUser.phone)
         console.log(selectedUser)
+return(
+
+  <Alert selectedUser={selectedUser} /> 
+)
     }
-    
+
       function handleDelete (userObj){
         fetch(`http://localhost:3000/users/${userObj.id}`, {
             method: 'DELETE'
@@ -40,11 +45,11 @@ function User(){
             </ul>
         </ol> 
       ))  
-
-    return (
+      return (
+  
         <div>
             {userArr}
-            <Profile users={users} setUsers={setUsers} selectedUser={selectedUser}/>
+            <Profile users={users} setUsers={setUsers} />
         </div>
     );
 }
