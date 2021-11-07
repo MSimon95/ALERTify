@@ -7,7 +7,7 @@ function Alert(){
     const [allAlerts, setAllAlerts] = useState([]);
     const [selectedAlert, setSelectedAlert] = useState(null);
     const API_AllAlerts = "http://localhost:3000/alerts"
-        const [currentPhone, setCurrentPhone] = useState(9174285006);
+    const [currentPhone, setCurrentPhone] = useState(9174285006);
 
   
    
