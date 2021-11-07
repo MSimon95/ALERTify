@@ -5,7 +5,7 @@ import Alert from './Alert'
 function User(){
     const [users, setUsers] = useState([]);
     const API_Users = "http://localhost:3000/users"
-    const [selectedUser, setSelectedUser] = useState(1);
+    const [selectedUser, setSelectedUser] = useState(9174285006);
 
     useEffect(()=>{
         fetch(API_Users)
@@ -14,11 +14,13 @@ function User(){
       }, [])
 
       function handleClick(currentUser){
-        setSelectedUser(currentUser.phone)
+        const updatePhone= currentUser.phone
+        setSelectedUser(updatePhone)
         console.log(selectedUser)
 return(
-
-  <Alert selectedUser={selectedUser} /> 
+<div>
+  <Alert selectedUser={selectedUser} setSelectedUser={setSelectedUser}/> 
+  </div>
 )
     }
 
