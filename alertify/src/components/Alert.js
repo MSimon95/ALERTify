@@ -56,10 +56,7 @@ function Alert(){
     function handleClick(currentAlert){
         setSelectedAlert(currentAlert)
     }
-    // function handlePhone(selectedUser){
-    //   setCurrentPhone(selectedUser.phone)
-    //   console.log(selectedUser)
-    // }
+   
 
     function handleDelete (alertObj){
         fetch(`http://localhost:3000/alerts/${alertObj.id}`, {
