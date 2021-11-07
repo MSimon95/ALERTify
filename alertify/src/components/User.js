@@ -4,7 +4,7 @@ import Profile from './Profile'
 function User(){
     const [users, setUsers] = useState([]);
     const API_Users = "http://localhost:3000/users"
-    const [selectedUser, setSelectedUser] = useState(0);
+    const [selectedUser, setSelectedUser] = useState(1);
 
     useEffect(()=>{
         fetch(API_Users)
@@ -14,9 +14,9 @@ function User(){
 
       function handleClick(currentUser){
         setSelectedUser(currentUser.phone)
-        console.log(selectedUser.phone)
+        console.log(selectedUser)
     }
-   
+    
       function handleDelete (userObj){
         fetch(`http://localhost:3000/users/${userObj.id}`, {
             method: 'DELETE'
