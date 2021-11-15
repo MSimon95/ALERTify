@@ -7,6 +7,10 @@ function User(){
     const API_Users = "http://localhost:3000/users"
     const [selectedUser, setSelectedUser] = useState(9174285006);
 
+    return <>
+    <Alert selectedUser={selectedUser} setSelectedUser={selectedUser} />
+  </>;
+
     useEffect(()=>{
         fetch(API_Users)
           .then((res) => res.json())
