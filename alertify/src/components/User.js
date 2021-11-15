@@ -18,9 +18,9 @@ function User(){
         setSelectedUser(updatePhone)
         console.log(selectedUser)
 return(
-<div>
-  <Alert selectedUser={selectedUser} setSelectedUser={setSelectedUser}/> 
-  </div>
+
+  <Alert key={selectedUser} setSelectedUser={setSelectedUser}/> 
+  
 )
     }
 
