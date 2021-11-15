@@ -1,15 +1,10 @@
 import React, { useState, useEffect } from "react"
 import Profile from './Profile'
-import Alert from './Alert'
 
 function User(){
     const [users, setUsers] = useState([]);
     const API_Users = "http://localhost:3000/users"
     const [selectedUser, setSelectedUser] = useState(9174285006);
-
-    return <>
-    <Alert selectedUser={selectedUser} setSelectedUser={selectedUser} />
-  </>;
 
     useEffect(()=>{
         fetch(API_Users)
