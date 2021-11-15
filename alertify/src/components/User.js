@@ -17,11 +17,6 @@ function User(){
         const updatePhone= currentUser.phone
         setSelectedUser(updatePhone)
         console.log(selectedUser)
-return(
-
-  <Alert key={selectedUser} setSelectedUser={setSelectedUser}/> 
-  
-)
     }
 
       function handleDelete (userObj){

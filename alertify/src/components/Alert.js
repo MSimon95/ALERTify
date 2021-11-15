@@ -3,15 +3,15 @@ import AlertForm from './AlertForm';
 import AlertUpdateForm from './AlertUpdateForm';
 import User from "./User";
 
-function Alert({key, setSelectedUser}) {
+function Alert({selectedUser, setSelectedUser}) {
 
     const [allAlerts, setAllAlerts] = useState([]);
     const [selectedAlert, setSelectedAlert] = useState(null);
     const API_AllAlerts = "http://localhost:3000/alerts"
     const [currentPhone, setCurrentPhone] = useState(9174285006);
 
-    console.log(key)
-  
+    console.log(selectedUser)
+
     useEffect(()=>{
       fetch(API_AllAlerts)
       .then((res) => res.json())
@@ -39,7 +39,7 @@ function Alert({key, setSelectedUser}) {
       Info:${alertClicked.info}
       Date:${alertClicked.date}
       Time:${alertClicked.time}        
-      Place:${alertClicked.place}&to=${key}&statusCallback=11377&mediaUrl=${alertClicked.image}`, {
+      Place:${alertClicked.place}&to=${selectedUser}&statusCallback=11377&mediaUrl=${alertClicked.image}`, {
         "method": "POST",
         "headers": {
           "x-rapidapi-key": "933e774a35msh8bc92379d6f01adp1f20d5jsnc1c191a09591",
