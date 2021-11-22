@@ -37,7 +37,7 @@ function Alert({selectedUser, setSelectedUser}) {
       Info:${alertClicked.info}
       Date:${alertClicked.date}
       Time:${alertClicked.time}        
-      Place:${alertClicked.place}&to=${selectedUser}&statusCallback=11377&mediaUrl=${alertClicked.image}`, {
+      Place:${alertClicked.place}&to=${currentPhone}&statusCallback=11377&mediaUrl=${alertClicked.image}`, {
         "method": "POST",
         "headers": {
           "x-rapidapi-key": "933e774a35msh8bc92379d6f01adp1f20d5jsnc1c191a09591",
