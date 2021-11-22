@@ -10,7 +10,6 @@ function Alert({selectedUser, setSelectedUser}) {
     const API_AllAlerts = "http://localhost:3000/alerts"
     const [currentPhone, setCurrentPhone] = useState(9174285006);
 
-    console.log(selectedUser)
 
     useEffect(()=>{
       fetch(API_AllAlerts)
