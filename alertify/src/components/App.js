@@ -9,10 +9,10 @@ import Profile from './Profile'
 import Group from './Group'
 import About from './About'
 
-function App({selectedUser, setSelectedUser}) {
+function App() {
   const [allAlerts, setAllAlerts] = useState([]);
 const API_AllAlerts = "http://localhost:3000/alerts"
-console.log(selectedUser)
+
     useEffect(()=>{
       fetch(API_AllAlerts)
         .then((res) => res.json())
@@ -34,7 +34,7 @@ console.log(selectedUser)
           </Route >
 
           <Route exact path="/user">
-            <User selectedUser={selectedUser}/> 
+            <User/> 
           </Route>
 
           <Route exact path="/group_alerts">
