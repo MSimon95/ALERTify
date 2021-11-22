@@ -4,7 +4,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction'
 // import { Calendar } from '@fullcalendar/core'
 
-function GroupAlert({allAlerts}) {
+function GroupAlert() {
     const [groupEvents, setGroupEvents] = useState([])
     
     const API_Alerts = 'http://localhost:3000/alerts'

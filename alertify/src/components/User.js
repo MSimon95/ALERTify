@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Profile from './Profile'
+import App from './App'
 
 function User(){
     const [users, setUsers] = useState([]);
@@ -46,6 +47,7 @@ function User(){
         <div>
             {userArr}
             <Profile users={users} setUsers={setUsers} />
+            <App selectedUser={selectedUser} setSelectedUser={setSelectedUser} />
         </div>
     );
 }
