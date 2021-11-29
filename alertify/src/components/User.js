@@ -27,20 +27,22 @@ function User(){
         setUsers(updatedUsers);
     }
     
-      const userArr = users.map((user)=> ( 
+      const userArr = users.map((user)=> ( user.groups.map((group)=>(
         <ol key={user.id}>
             <ul className="user-container" id={user.id}>
                 <img src={user.image} alt={user.username}></img>
                 <h1>{user.username}</h1>
-                <p>{user.bio}</p>
-                <p>{user.groups.description}</p> 
-                 
+                <p>Bio: {user.bio}</p>
+                <p>Groups: {group.description}</p>
+                <p>{}</p>
+                
         <button type="button" className="btn-primary" onClick={() => handleClick(user)}>
           Choose Recepient
         </button>
         <button className="button-2" onClick={() =>handleDelete(user)} >🗑</button>
             </ul>
         </ol> 
+        )) 
       ))  
       return (
   
