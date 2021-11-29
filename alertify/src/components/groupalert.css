@@ -8,7 +8,7 @@ tr {
 }
 
 .calendar-container {
-    border: 2px solid rgb(14, 170, 231);
+    border: 2px solid #1606f7b4;
 }
 
 .calendar {
@@ -19,7 +19,7 @@ tr {
 }
 
 .calendar-header {
-    border-bottom: 1px dashed rgb(14, 170, 231);
+    border-bottom: 1px dashed #1606f7b4;
     font-size: 1.6em;
 }
 
@@ -71,7 +71,7 @@ tr {
     position: absolute;
     padding: 5px;
     background: white;
-    border: 2px solid skyblue;
+    border: 2px solid #1606f7b4;
 }
 
 .month-popup div {
