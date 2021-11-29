@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Profile from './Profile'
-  
+
 function User(){
     const [users, setUsers] = useState([]);
     const API_Users = "http://localhost:3000/users"
@@ -11,11 +11,10 @@ function User(){
           .then((res) => res.json())
           .then((data) => setUsers(data))
       }, [])
-
+    console.log(users)
       function handleClick(currentUser){
         const updatePhone= currentUser.phone
         setSelectedUser(updatePhone)
-        console.log(selectedUser)
     }
 
       function handleDelete (userObj){
@@ -33,7 +32,9 @@ function User(){
             <ul className="user-container" id={user.id}>
                 <img src={user.image} alt={user.username}></img>
                 <h1>{user.username}</h1>
-                <p>{user.bio}</p>  
+                <p>{user.bio}</p>
+                <p>{user.groups.description}</p> 
+                 
         <button type="button" className="btn-primary" onClick={() => handleClick(user)}>
           Choose Recepient
         </button>
